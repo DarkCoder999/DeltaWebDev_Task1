@@ -1,0 +1,98 @@
+body {
+    background-color: #6DC9C5;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 2px solid black;
+    border-spacing: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: orange;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    z-index: 90;
+}
+
+td {
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.blink {
+    animation: 1000ms blinking 1;
+}
+
+@keyframes blinking {
+    0%, 50%, 100% {
+        background-color: aqua;
+    }
+}
+
+.score {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+}
+
+body > h1 {
+    animation: 1000ms changeColor infinite;
+    font-family: "Sofia", sans-serif;
+}
+
+@keyframes changeColor {
+    25% {
+        color: #f55742;
+    }
+    50% {
+        color: #f5b942;
+    }
+    75% {
+        color: #099906;
+    }
+    100% {
+        color: #314d4a;
+    }
+}
+
+.btn-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.start {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Sofia", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #2b24f0;
+    background-color: #d6ba2b;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
